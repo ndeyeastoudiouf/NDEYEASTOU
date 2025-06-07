@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systemxëy.sn - Plateforme d'emploi au Sénégal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-D-WPEhd-.css">
+</head>
+<body>
+    <div id="app">
+        <div id="auth-container" class="active">
+            <div class="auth-box">
+                <div class="logo-container">
+                    <img src="/assets/image1-CICB78gu.JPG" alt="Logo Systemxëy">
+                    <h1>Systemxëy<span>.sn</span></h1>
+                </div>
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-target="login">Connexion</button>
+                    <button class="auth-tab" data-target="register">Inscription</button>
+                </div>
+                
+                <div id="login-form" class="auth-form active">
+                    <div class="input-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Mot de passe</label>
+                        <input type="password" id="login-password" required>
+                        <i class="toggle-password fas fa-eye-slash"></i>
+                    </div>
+                    <div class="user-type-selection">
+                        <label>
+                            <input type="radio" name="user-type-login" value="student" checked>
+                            <span>Étudiant</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="user-type-login" value="recruiter">
+                            <span>Recruteur</span>
+                        </label>
+                    </div>
+                    <button id="login-btn" class="btn-primary">Se connecter</button>
+                    <div class="form-footer">
+                        <a href="#" id="forgot-password">Mot de passe oublié?</a>
+                    </div>
+                </div>
+                
+                <div id="register-form" class="auth-form">
+                    <div class="input-group">
+                        <label for="register-name">Nom complet</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-password">Mot de passe</label>
+                        <input type="password" id="register-password" required>
+                        <i class="toggle-password fas fa-eye-slash"></i>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-confirm-password">Confirmer le mot de passe</label>
+                        <input type="password" id="register-confirm-password" required>
+                    </div>
+                    <div class="user-type-selection">
+                        <label>
+                            <input type="radio" name="user-type-register" value="student" checked>
+                            <span>Étudiant</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="user-type-register" value="recruiter">
+                            <span>Recruteur</span>
+                        </label>
+                    </div>
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms-checkbox" required>
+                        <label for="terms-checkbox">J'accepte les <a href="#">termes et conditions</a></label>
+                    </div>
+                    <button id="register-btn" class="btn-primary">S'inscrire</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-container">
+            <header>
+                <div class="container">
+                    <div class="logo">
+                        <h1>Systemxëy<span>.sn</span></h1>
+                    </div>
+                    <nav>
+                        <ul class="desktop-menu">
+                            <li><a href="#" class="active" data-page="home">Accueil</a></li>
+                            <li><a href="#" data-page="jobs">Offres</a></li>
+                            <li><a href="#" data-page="blog">Blog</a></li>
+                            <li><a href="#" data-page="about">À propos</a></li>
+                            <li><a href="#" data-page="contact">Contact</a></li>
+                        </ul>
+                        <div class="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </nav>
+                    <div class="user-menu">
+                        <div class="user-avatar">
+                            <img src="/assets/image1-CICB78gu.JPG"  alt="User Avatar">
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="#" data-page="profile"><i class="fas fa-user"></i> Profil</a>
+                            <a href="#" data-page="dashboard"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
+                            <a href="#" data-page="messages"><i class="fas fa-envelope"></i> Messages</a>
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu">
+                    <ul>
+                        <li><a href="#" class="active" data-page="home">Accueil</a></li>
+                        <li><a href="#" data-page="jobs">Offres</a></li>
+                        <li><a href="#" data-page="blog">Blog</a></li>
+                        <li><a href="#" data-page="about">À propos</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
+                        <li class="mobile-user-menu">
+                            <a href="#" data-page="profile"><i class="fas fa-user"></i> Profil</a>
+                            <a href="#" data-page="dashboard"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
+                            <a href="#" data-page="messages"><i class="fas fa-envelope"></i> Messages</a>
+                            <a href="#" id="mobile-logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <main>
+                <section id="home" class="page active">
+                    <div class="hero">
+                        <div class="container">
+                            <div class="hero-content">
+                                <h1>La première communauté digitale de l'emploi au Sénégal</h1>
+                                <p>Connectez-vous avec les meilleurs talents et opportunités professionnelles au Sénégal</p>
+                                <div class="hero-buttons">
+                                    <button class="btn-primary" id="student-cta">Dépose ton CV</button>
+                                    <button class="btn-secondary" id="recruiter-cta">Publie une offre</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="cv-upload-section" style="margin: var(--space-4) 0; background: white; padding: var(--space-3); border-radius: var(--border-radius-md); box-shadow: var(--shadow-md);">
+                            <h2 style="margin-bottom: var(--space-3);">Déposer votre CV</h2>
+                            <form id="cv-upload-form" style="max-width: 500px; margin: 0 auto;">
+                                <div class="input-group">
+                                    <label for="cv-file">Sélectionnez votre CV (PDF uniquement)</label>
+                                    <input type="file" id="cv-file" accept=".pdf" required style="border: 2px dashed var(--neutral-300); padding: var(--space-3); text-align: center; cursor: pointer;">
+                                </div>
+                                <button type="submit" class="btn-primary" style="margin-top: var(--space-2);">
+                                    <i class="fas fa-upload"></i> Déposer le CV
+                                </button>
+                            </form>
+                            <div id="upload-status" style="margin-top: var(--space-2); text-align: center;"></div>
+                        </div>
+
+                        <div class="stats-section">
+                            <div class="stat-card">
+                                <i class="fas fa-user-graduate"></i>
+                                <h3>200+</h3>
+                                <p>Étudiants inscrits</p>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-building"></i>
+                                <h3>50+</h3>
+                                <p>Recruteurs partenaires</p>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-briefcase"></i>
+                                <h3>120+</h3>
+                                <p>Offres d'emploi</p>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-handshake"></i>
+                                <h3>75+</h3>
+                                <p>Recrutements réussis</p>
+                            </div>
+                        </div>
+
+                        <div class="features-section">
+                            <h2>Comment ça marche</h2>
+                            <div class="features-grid">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <h3>Créez votre compte</h3>
+                                    <p>Inscrivez-vous en tant qu'étudiant ou recruteur et accédez à notre plateforme.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <h3>Complétez votre profil</h3>
+                                    <p>Ajoutez vos informations et votre CV ou créez le profil de votre entreprise.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <h3>Explorez les opportunités</h3>
+                                    <p>Parcourez les offres d'emploi ou recherchez des talents qualifiés.</p>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <h3>Connectez-vous</h3>
+                                    <p>Échangez directement avec les recruteurs ou les candidats potentiels.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonials-section">
+                            <h2>Témoignages</h2>
+                            <div class="testimonials-slider">
+                                <div class="testimonial-card active">
+                                    <div class="testimonial-img">
+                                        <img src="/assets/image4-DBlEu8Hk.JPG"  alt="Testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>"Grâce à Systemxëy, j'ai trouvé mon stage de fin d'études en seulement deux semaines. La plateforme est intuitive et les recruteurs sont réactifs."</p>
+                                        <h4>Fatou Diop</h4>
+                                        <p class="testimonial-position">Étudiante en Master Finance</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="testimonial-img">
+                                        <img src="/assets/image2-P6J5jXfZ.JPG"   alt="Testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>"En tant que recruteur, cette plateforme m'a permis de trouver rapidement des talents qualifiés pour notre entreprise. Le filtrage par compétences est très efficace."</p>
+                                        <h4>Amadou Sall</h4>
+                                        <p class="testimonial-position">DRH, TechSenegal</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="testimonial-img">
+                                        <img src="/assets/image3-BG_rQlUe.JPG"  alt="Testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>"Systemxëy est un véritable pont entre le monde académique et professionnel. J'ai pu construire mon réseau professionnel avant même d'obtenir mon diplôme."</p>
+                                        <h4>Mamadou Ndiaye</h4>
+                                        <p class="testimonial-position">Étudiant en Informatique</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-controls">
+                                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                                <div class="testimonial-dots">
+                                    <span class="active"></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="blog-preview-section">
+                            <h2>Articles récents</h2>
+                            <div class="blog-preview-grid">
+                                <div class="blog-card">
+                                    <div class="blog-img">
+                                        <img src="/assets/image8-BVrotdxE.JPG"  alt="Blog">
+                                    </div>
+                                    <div class="blog-content">
+                                        <span class="blog-category">Conseils CV</span>
+                                        <h3>5 astuces pour un CV qui se démarque</h3>
+                                        <p>Découvrez comment créer un CV percutant qui attirera l'attention des recruteurs...</p>
+                                        <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="blog-card">
+                                    <div class="blog-img">
+                                        <img src="/assets/image7-CSV50PLG.JPG"  alt="Blog">
+                                    </div>
+                                    <div class="blog-content">
+                                        <span class="blog-category">Entretien</span>
+                                        <h3>Comment réussir son entretien d'embauche</h3>
+                                        <p>Préparez-vous efficacement pour maximiser vos chances lors d'un entretien...</p>
+                                        <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="blog-card">
+                                    <div class="blog-img">
+                                        <img src="/assets/image2-P6J5jXfZ.JPG"  alt="Blog">
+                                    </div>
+                                    <div class="blog-content">
+                                        <span class="blog-category">Tendances</span>
+                                        <h3>Les secteurs qui recrutent au Sénégal en 2025</h3>
+                                        <p>Analyse des domaines professionnels les plus dynamiques sur le marché sénégalais...</p>
+                                        <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center-btn">
+                                <a href="#" class="btn-secondary" data-page="blog">Voir tous les articles</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-col">
+                            <h3>Systemxëy<span>.sn</span></h3>
+                            <p>La première communauté digitale de l'emploi au Sénégal, connectant étudiants et recruteurs.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Liens Rapides</h4>
+                            <ul>
+                                <li><a href="#" data-page="home">Accueil</a></li>
+                                <li><a href="#" data-page="jobs">Offres d'emploi</a></li>
+                                <li><a href="#" data-page="blog">Blog</a></li>
+                                <li><a href="#" data-page="about">À propos</a></li>
+                                <li><a href="#" data-page="contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Ressources</h4>
+                            <ul>
+                                <li><a href="#">Conseils CV</a></li>
+                                <li><a href="#">Préparation entretien</a></li>
+                                <li><a href="#">Recherche d'emploi</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Contact</h4>
+                            <ul class="contact-info">
+                                <li><i class="fas fa-phone"></i> +221 77 516 19 38</li>
+                                <li><i class="fas fa-phone"></i> +221 77 323 70 52</li>
+                                <li><i class="fas fa-envelope"></i> strategcom221@gmail.com</li>
+                                <li><i class="fas fa-map-marker-alt"></i> Dakar, Sénégal</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Systemxëy.sn. Tous droits réservés.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cv-upload.js"></script>
+</body>
+</html>
